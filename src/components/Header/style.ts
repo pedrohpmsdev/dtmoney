@@ -1,35 +1,35 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-    background: var(--blue);
-`;
-
-export const Content = styled.div`
     max-width: 1120px;
     margin: 0 auto;
-
     padding: 2rem 1rem 12rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
-    button {
-        font-size: 1rem;
-        background: var(--blue-light);
-        color: #FFF;
-        border: 0; 
-        padding: 0 2rem;
-        border-radius: 0.25rem;
-        height: 3rem;
-        
-        transition: filter 0.2s;
-
-        &:hover {
-            filter: brightness(0.9);
-        }
+    h1 {
+        color: #fbf3d9ff;  
     }
 
+    .typing {
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid #333;
+        width: 0;
+        animation: typing 3s steps(41, end) forwards,
+                   blink 1s step-end infinite;
+    }
 
-`;
+    @keyframes typing {
+        from {width: 0%}
+        to {width: 41%}
+    }
+
+    @keyframes blink {
+        50% {border-color: transparent}
+    }
+        `;
 
 
+  
